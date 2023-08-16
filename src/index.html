@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lanchonete</title>
+  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card-body">
+     <h1 class="text-center mb-4">Cardápio</h1>
+    </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">cafe</th>
+            <td>Café</td>
+            <td>R$ 3,00</td>
+          </tr>
+          <tr>
+            <th scope="row">chantily</th>
+            <td>Chantily (extra do Café)</td>
+            <td>R$ 1,50</td>
+          </tr>
+          <tr>
+            <th scope="row">suco</th>
+            <td>Suco Natural</td>
+            <td>R$ 6,20</td>
+          </tr>
+          <tr>
+            <th scope="row">sanduiche</th>
+            <td>Sanduíche</td>
+            <td>R$ 6,50</td>
+          </tr>
+          <tr>
+            <th scope="row">queijo</th>
+            <td>Queijo (extra do Sanduíche)	</td>
+            <td>R$ 2,00
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">salgado	</th>
+            <td>Salgado</td>
+            <td>R$ 7,25
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">combo1</th>
+            <td>1 Suco e 1 Sanduíche	</td>
+            <td>R$ 9,50
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">combo2</th>
+            <td>1 Café e 1 Sanduíche	</td>
+            <td>R$ 7,50
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <form id="order-form">
+        <div class="form-group">
+        <br>
+        <label for="items"><h4>Itens Desejados (código,quantidade;código,quantidade...):</h4></label>
+        <input type="text" class="form-control" id="pedido" name="pedido" placeholder="Ex.:cafe,1;chantily,1">
+      </div>
+      <br>
+      <ul class="list-group list-group-flush">
+        <label for="items"><h4>Métodos de pagamento disponíveis:</h4></label>
+        <li class="list-group-item style-disc">dinheiro</li>
+        <li class="list-group-item">debito</li>
+        <li class="list-group-item">credito</li>
+      </ul>
+      <br>
+      Digite aqui o método de pagamento desejado:
+      <br><br>
+      <input type="text" class="form-control" id="payment-method" name="payment-method" placeholder="Ex.:dinheiro">
+      <br>
+      <button type="submit" class="btn btn-dark" id="checkout-btn">Finalizar Compra</button>
+      <br>
+    </form>
+    <h2><div id="result" class="card-body text-center mb-4"></div></h2>
+    <br>
+  </div>  
+</body>
+</html>
